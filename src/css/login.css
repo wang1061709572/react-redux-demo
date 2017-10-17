@@ -1,0 +1,33 @@
+.login_contain{
+    margin-top: 20%;
+    padding: 10px 20px;
+}
+.login_list{
+    width: 100%;
+    padding-bottom: 20px;
+}
+.login_txt{
+    display: inline-block;
+    font-size: 16px;
+    padding-right: 10px;
+}
+.login_input{
+    line-height: 30px;
+    border: 1px solid #ccc;
+    width: 75%;
+    height: 40px;
+    padding: 0 5px;
+    font-size: 16px;
+}
+.btn_contain{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+.login_btn{
+    width: 70px;
+    line-height: 30px;
+    background-color: #0e91d3;
+    border: 1px solid #0e91d3;
+    color: #fff;
+}

@@ -1,0 +1,101 @@
+.item{
+    padding-left: 40px;
+    margin-top: 10px;
+    border: none;
+    border-color: #ddd;
+    background-color: #fff;
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    border-width: 1px;
+    font-size: 16px;
+}
+.content{
+    padding: 0 10px;
+}
+.selectRight{
+    background: url(../images/gougou.png) no-repeat center;
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    top: 24px;
+    left: 10px;
+}
+.task_area_con{
+    padding-left: 10px;
+}
+.srart_area{
+    height: 23px;
+}
+.newtask_area_start{
+    background: url(../images/startIcon.png) no-repeat;
+    background-size: 8px;
+    background-position: 0 7px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 50px
+}
+.newtask_area_end{
+    background: url(../images/endIcon.png) no-repeat left;
+    background-size: 8px;
+    background-position: 0 12px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 26px;
+    left: 50px;
+}
+.task_area_name{
+    padding-left: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    display: inline-block;
+    font-weight: 600;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*background-color: white;*/
+    white-space: nowrap;
+    word-break: keep-all;
+    text-align: left;
+}
+.area_icon_one{
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    background-color: #d9d9d9;
+    position: absolute;
+    border-radius: 50%;
+    top: 22px;
+    left: 52px;
+}
+.area_icon_two{
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    background-color: #d9d9d9;
+    position: absolute;
+    border-radius: 50%;
+    top: 31px;
+    left: 52px;
+}
+.task_area_name{
+    padding-left: 10px;
+}
+.task_start_time{
+    color: #999;
+    background-position:0 10px;
+    padding-left: 20px;
+    background: url("../images/timeIcon.png") no-repeat;
+    background-size: 8px;
+    background-position: 0 10px;
+    line-height: 30px;
+    font-size: 15px;
+}
