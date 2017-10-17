@@ -1,13 +1,13 @@
-##通过create-react-app创建
+## 通过create-react-app创建
 
-##npm install
+## npm install
 
-##npm run eject
+## npm run eject
 
-##npm start
+## npm start
 Open http://localhost:3000 to view it in the browser.
-##npm test
+## npm test
 See the section about running tests for more information.
 
-##npm run build
+## npm run build
 Builds the app for production to the build folder.
