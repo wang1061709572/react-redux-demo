@@ -1,0 +1,24 @@
+.cinemalist{
+     background-color: #FFF;
+     padding: 0 20px;
+ }
+.cinemalist .item{
+    padding: 20px 0;
+    border-bottom: 1px solid #E6E6E6;
+    width: 100%;
+}
+.cinema-name{
+    font-size: 18px;
+    color: #000;
+    display: inline-block;
+    line-height: 35px;
+}
+.cinema-price{
+    color: #e54847;
+    font-size: 1.2rem;
+    padding-left: 15px;
+}
+.cinema-price:after{
+    content: '元';
+    font-size: 0.8rem;
+}

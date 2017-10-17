@@ -3,15 +3,14 @@
  */
 import React from 'react';
 
-const Reducer = (state={loginData:{},taskCarList:[]},action) => {
+const Reducer = (state={movieList:[],cinemaList:[]},action) => {
     switch (action.type) {
-        case 'login':
-            console.log(action)
-            return Object.assign({},state,{loginData:action.loginData})
+        case 'movieList':
+            return Object.assign({},state,{movieList:action.movieList})
         break
-        case 'taskAndcar':
-            return Object.assign({},state,{taskCarList:action.taskCarList})
-        break
+        case 'cinemaList':
+            return Object.assign({},state,{cinemaList:action.cinemaList})
+            break
         default :
             return state
     }

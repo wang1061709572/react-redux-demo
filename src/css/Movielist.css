@@ -1,0 +1,47 @@
+.movielist{
+    background-color: #FFF;
+    padding: 0 20px;
+}
+.movielist .item{
+    padding: 20px 0;
+    border-bottom: 1px solid #E6E6E6;
+    width: 100%;
+}
+.movie-cover{
+    width: 70px;
+    float: left;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+}
+.movie-cover img{
+    width: 100%;
+}
+.movie-content{
+    float: left;
+    position: relative;
+    padding-left: 10px;
+    width: calc(100% - 80px);
+}
+.movie-name,.movie-cat,.movie-star,.movie-showInfo{
+    line-height: 25px;
+    font-size: 14px;
+}
+.movie-star{
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.movie-cat,.movie-star,.movie-showInfo{
+    margin-right: 40px;
+}
+.movie-sc{
+    float: right;
+    color: #FFB400;
+    font-size: 1rem;
+}
+.movie-sc:after{
+    content: "分";
+    font-size: 12px;
+}

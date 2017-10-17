@@ -17,9 +17,9 @@ class App extends Component {
     )
     return (
         <div className="container">
-            <Link className='nav_list' to='login'>登录</Link>
             <Link className='nav_list' to='homePage'>首页</Link>
-            <Link className='nav_list' to='taskAndcar'>任务和车辆</Link>
+            <Link className='nav_list' to='movieList'>电影</Link>
+            <Link className='nav_list' to='cinemaList'>影院</Link>
             {ChildrenEle}
         </div>
     );
@@ -30,7 +30,8 @@ const mapStateToProps = (state) => {
     return {
         results:{
             loginData: state.loginData,
-            taskCarList: state.taskCarList
+            movieList: state.movieList,
+            cinemaList: state.cinemaList
         }
     }
 }

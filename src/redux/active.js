@@ -4,41 +4,37 @@
 import React from 'react';
 import { browserHistory } from 'react-router'
 import 'whatwg-fetch';
-import fetchPost from '../config/fetch.js'
+import * as fetch from '../config/fetch.js'
 const stringifyParams = (params) => (
 
     Object.keys(params).map((key) => (key + '=' + encodeURIComponent(params[key]))).join('&')
 
 );
 
-export const loginClick = (params)=> (dispatch)=>{
-    console.log(params)
-    let loginData = {
-        loginName:params.username,
-        password:params.password
+export const getMovieList = (params)=> (dispatch)=>{
+    let listData = {
+        type:'hot',
+        offset:0,
+        limit:10
     }
-    // fetchPost(config.url+action.url,loginData,fetchSuc)
-    fetchPost('',loginData,fetchSuc)
+    fetch.fetchGet('/movie/list.json',listData,fetchSuc)
     function fetchSuc(res) {
+        console.log('--------------------')
         console.log(res)
-        localStorage.setItem('personId',res.baseUserId)
         dispatch({
-            type:'login',
-            loginData:res
+            type:'movieList',
+            movieList:res.movies
         })
-        browserHistory.push('taskAndcar')
     }
 }
-
-export const taskAndCarList = (params)=> (dispatch)=>{
-
-    // fetchPost(config.url+action.url,loginData,fetchSuc)
-    fetchPost('','',fetchSuc)
+export const getCinemaList = (params)=> (dispatch)=>{
+    fetch.fetchGet('/cinemas.json','',fetchSuc)
     function fetchSuc(res) {
+        console.log('--------------------')
         console.log(res)
         dispatch({
-            type:'taskAndcar',
-            taskCarList:res
+            type:'cinemaList',
+            cinemaList:res.东城区
         })
     }
 }
