@@ -1,19 +1,40 @@
 /**
  * Created by Administrator on 2017/8/3.
  */
-import React from 'react';
+import { combineReducers } from 'redux'
 
-const Reducer = (state={movieList:[],cinemaList:[]},action) => {
+const movieReducer = (state={},action) => {
     switch (action.type) {
         case 'movieList':
-            return Object.assign({},state,{movieList:action.movieList})
+            return {
+                ['results']: {
+                    type:action.type,
+                    movieList:action.movieList,
+                }
+            }
         break
         case 'cinemaList':
-            return Object.assign({},state,{cinemaList:action.cinemaList})
-            break
+            return {
+                ['results']: {
+                    type:action.type,
+                    cinemaList:action.cinemaList
+                }
+            }
+        case 'dataDetail':
+            return {
+                ['results']: {
+                    type:action.type,
+                    movieDetail:action.movieDetail,
+                }
+            }
+        break
         default :
             return state
     }
 }
 
-export default Reducer
+const RootReducer = combineReducers({
+    movieReducer
+})
+
+export default RootReducer

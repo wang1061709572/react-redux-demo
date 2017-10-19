@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router'
 import '../css/Movielist.css'
+import NavbarBox from './navbar'
 
 class ListBox extends Component{
     constructor(props){
         super(props);
+        this.toMovieDetail = this.toMovieDetail.bind(this)
+        this.state = {
+            movieid: this.props.movieInfo.id
+        }
+    }
+    toMovieDetail(){
+        console.log(this.state.movieid)
+        let path = {
+            pathname:'/movieDetail',
+            state:{movieid:this.state.movieid}
+        }
+        browserHistory.push(path)
     }
     render(){
         return (
-            <div className="item clearFloat">
+            <div className="item clearFloat" onClick={this.toMovieDetail}>
                 <div className="movie-cover"><img src={this.props.movieInfo.img} /></div>
                 <div className="movie-content">
                     <div className="movie-name">{this.props.movieInfo.nm} <span className="movie-sc">{this.props.movieInfo.sc}</span></div>
@@ -25,6 +39,7 @@ const MovieBox = React.createClass({
         return {}
     },
     componentDidMount: function(){
+        console.log('list')
         this.props.actions.getMovieList()
     },
     render: function () {
@@ -38,6 +53,7 @@ const MovieBox = React.createClass({
         }.bind(this))
         return (
             <div>
+                <NavbarBox />
                 {movielist}
             </div>
         )

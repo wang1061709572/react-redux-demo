@@ -8,14 +8,16 @@ import App from '../App.js'
 import HomePage from '../component/homepage.js'
 import movieList from '../component/MovieList.js'
 import cinemaList from '../component/CinemaList.js'
+import movieDetail from '../component/movieDetail.js'
 
 const RouteConfig = (
     <Router history={browserHistory}>
         <Route path='/' component={App}>
             <IndexRoute component={HomePage} />
-            <Route path='homePage' component={HomePage} />
-            <Route path='movieList' component={movieList}/>
-            <Route path='cinemaList' component={cinemaList}/>
+            <Route path='/homePage' component={HomePage} />
+            <Route path='/movieList' component={movieList} />
+            <Route path='/movieDetail' component={movieDetail}/>
+            <Route path='/cinemaList' component={cinemaList}/>
         </Route>
     </Router>
 )

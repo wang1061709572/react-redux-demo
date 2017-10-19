@@ -5,11 +5,6 @@ import React from 'react';
 import { browserHistory } from 'react-router'
 import 'whatwg-fetch';
 import * as fetch from '../config/fetch.js'
-const stringifyParams = (params) => (
-
-    Object.keys(params).map((key) => (key + '=' + encodeURIComponent(params[key]))).join('&')
-
-);
 
 export const getMovieList = (params)=> (dispatch)=>{
     let listData = {
@@ -35,6 +30,18 @@ export const getCinemaList = (params)=> (dispatch)=>{
         dispatch({
             type:'cinemaList',
             cinemaList:res.东城区
+        })
+    }
+}
+export const getMovieDetail = (params)=>(dispatch)=>{
+    let movieId = params
+    fetch.fetchGet(`/movie/${movieId}.json`,'',fetchSuc)
+    function fetchSuc(res) {
+        console.log('--------------------')
+        console.log(res)
+        dispatch({
+            type:'dataDetail',
+            movieDetail:res.MovieDetailModel,
         })
     }
 }

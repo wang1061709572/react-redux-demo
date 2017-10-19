@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import '../css/CinemaList.css'
+import NavbarBox from './navbar'
 
 class ListBox extends Component {
     constructor (props){
@@ -34,6 +35,7 @@ const CinemaBox = React.createClass({
         }.bind(this))
         return(
             <div>
+                <NavbarBox />
                 {cinemalist}
             </div>
         )

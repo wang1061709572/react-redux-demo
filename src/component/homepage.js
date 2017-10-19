@@ -5,6 +5,7 @@ import React,{ Component } from 'react'
 import { Link,Lifecycle } from 'react-router'
 import logo from '../logo.svg'
 import '../App.css';
+import NavbarBox from './navbar'
 
 export default class homePage extends Component {
     // 构造
@@ -26,6 +27,7 @@ export default class homePage extends Component {
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
+                <NavbarBox></NavbarBox>
             </div>
         )
     }
